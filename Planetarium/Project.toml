@@ -1,6 +1,6 @@
 name = "Planetarium"
 uuid = "24041e76-7812-4fe1-b587-6c494c6d3b46"
-authors = ["Chernyshov Artem <artemka2015kek@gmail.com>"]
+authors = ["Chernyshov Artem <artemka2015kek@gmail.com>", "Albert Piunov <whowiewas@gmail.com>"]
 version = "0.1.0"
 
 [deps]

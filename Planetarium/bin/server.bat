@@ -1,1 +1,1 @@
-"C:\Users\artem\.julia\juliaup\julia-1.9.3+0.x64.w64.mingw32\bin\julia" -t auto --color=yes --depwarn=no --project=@. -q -i -- "%~dp0..\bootstrap.jl" -s=true %*
+"julia" -t auto --color=yes --depwarn=no --project=@. -q -i -- "%~dp0..\bootstrap.jl" -s=true %*
