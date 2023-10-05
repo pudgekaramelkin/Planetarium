@@ -1,10 +1,10 @@
-using Genie.Router
 using Planetarium
-
+using Planetarium.Users
 route("/") do
-  serve_static_file("login.html")
+  Users.getUser(1)
 end
 
 route("/test") do 
-  Db.executeQuery("SELECT * FROM Users")
+# Encryption.encrypt("sex",234)
 end
+
