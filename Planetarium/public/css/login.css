@@ -35,15 +35,32 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  gap: 15px;
 }
 
 input {
   width: 100%;
 }
 
+input::-webkit-input-placeholder {
+  text-align: center;
+}
+  
+input:-moz-placeholder { 
+  text-align: center;
+}
+  
+input::-moz-placeholder { 
+  text-align: center;
+  }
+  
+input:-ms-input-placeholder {
+  text-align: center;
+}
+
 .title {
   font-size: 60px;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .button-submit {
