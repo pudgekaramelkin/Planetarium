@@ -1,0 +1,120 @@
+.welcome-page {
+  display: grid;
+  flex-direction: column;
+  position: relative;
+  z-index: 0;
+  min-height: 100vh;
+  min-width: 100vw;
+  font-family: 'Pixelify Sans', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #fff;
+  background-image: url(../img/a0aa8454a090e487bc2a1a0977fb4835.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+} 
+
+.welcome-page::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0, 0, 0, .5);
+}
+
+.welcome-page__header__navigation {
+  display: flex;
+  gap: 2em;
+  padding: 1.1em;
+}
+
+.link {
+  color:white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+
+.welcome-page__main {
+  align-self: center;
+  justify-self: center;
+  max-width: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.welcome-page__main-title-descrioption {
+  max-width: 640px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.welcome-page__main-title {
+  font-size: 100px;
+  font-weight: 600;
+}
+
+.registerbtn {
+  background: radial-gradient(circle, rgba(41,236,255,1) 6%, rgba(34,0,250,1) 47%, rgba(209,105,194,1) 100%); 
+  background-size: 400% 400%;
+  animation: gradient-animation 3s  infinite alternate linear;
+  text-align: center;
+  width: 280px;
+  height: 60px;
+}
+
+.button-link {
+  font-weight: 600;
+  color: black;
+}
+
+/* .login-form {
+  height: 100vh;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+} */
+
+/* input {
+  width: 100%;
+  border: 0.04em solid white;
+  text-align: center;
+}
+
+input::-webkit-input-placeholder {
+  text-align: center;
+}
+  
+input:-moz-placeholder { 
+  text-align: center;
+}
+  
+input::-moz-placeholder { 
+  text-align: center;
+  }
+  
+input:-ms-input-placeholder {
+  text-align: center;
+}
+
+.title {
+  font-size: 60px;
+  font-weight: 800;
+}
+
+.button-submit {
+  background-color: #fff;
+  color: #000;
+
+  align-self: center;
+} */
