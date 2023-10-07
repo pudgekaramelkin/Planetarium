@@ -1,28 +1,58 @@
 @media screen and (min-width: 2000px){
+  .welcome-page__main-title {
+    font-size: 300px;
+  }
+
+  .welcome-page__main-title-descrioption {
+    font-size: 150px;
+  }
+
+  .registerbtn {
+    width: 1000px;
+    height: 300px;
+  }
+
   .welcome-page__header__navigation {
     gap: 8em;
   }
+
   .link {
     font-size: 80px;
   }
 }
 
 @media screen and (min-width: 4000px){
+  .welcome-page__main-title {
+    font-size: 350px;
+  }
+
+  .welcome-page__main-title-descrioption {
+    font-size: 200px;
+  }
+
+  .registerbtn {
+    width: 1400px;
+    height: 300px;
+  }
+
   .welcome-page__header__navigation {
     gap: 8em;
   }
+
   .link {
     font-size: 100px;
   }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 680px){
   .welcome-page__main-title {
     font-size: 35px;
   }
+
   .welcome-page__main-title-descrioption {
-    font-size: 30px;
+    font-size: 25px;
   }
+  
   .link {
     font-size: 15px;
   }
