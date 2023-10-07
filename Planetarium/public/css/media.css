@@ -1,26 +1,29 @@
-@media screen and (min-width: 3000px){
-  .login-form {
-    font-size: 120px;
+@media screen and (min-width: 2000px){
+  .welcome-page__header__navigation {
+    gap: 8em;
   }
-  .title {
-    font-size: 130px;
+  .link {
+    font-size: 80px;
   }
 }
 
 @media screen and (min-width: 4000px){
-  .login-form {
-    font-size: 140px;
+  .welcome-page__header__navigation {
+    gap: 8em;
   }
-  .title {
-    font-size: 150px;
+  .link {
+    font-size: 100px;
   }
 }
 
-@media screen and (max-width: 500px){
-  .login-form {
-    font-size: 40px;
+@media screen and (max-width: 600px){
+  .welcome-page__main-title {
+    font-size: 35px;
   }
-  .title {
-    font-size: 50px;
+  .welcome-page__main-title-descrioption {
+    font-size: 30px;
+  }
+  .link {
+    font-size: 15px;
   }
 }
