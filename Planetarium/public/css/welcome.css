@@ -67,11 +67,22 @@
   text-align: center;
   width: 280px;
   height: 60px;
+  transition: 50ms;
 }
 
 .button-link {
   font-weight: 600;
   color: black;
+}
+
+
+.registerbtn:hover {
+  outline: 2px solid #fff;
+}
+
+.registerbtn:active {
+  width: 240px;
+  height: 50px;
 }
 
 /* .login-form {
