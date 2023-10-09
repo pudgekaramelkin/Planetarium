@@ -29,6 +29,12 @@ module Users
     function deleteUser(user::User)::nothing
         DB.executeQuery("DELETE FROM Users WHERE id = $(user.id)")
     end
+    function changePassword(user::User, new_password::String)::nothing
+        DB.executeQuery("UPDATE Users SET password = $(new_password) WHERE id = $(user.id)")
+    end
+    function changePassword(id::Integer, new_password::String)::nothing
+        DB.executeQuery("UPDATE Users SET password = $(new_password) WHERE id = $(id)")
+    end
 
     
 end

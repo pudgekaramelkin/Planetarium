@@ -1,6 +1,12 @@
 module SpaceObjects
     using Planetarium
     using Planetarium.DB
+    greekNames::Vector{String} = ["First-Rate","Beguile","Sacralgia","SneakyCamel","nitch","Intonation","The Surgeon","Rogue",
+    "Jokey","Mystery","Plumulate","Everyday pursuits","animeactual","amazing looser","Joyful","Vital","Scandalitis","hippie glider",
+    "Ixemetek","Sororal","drunkbetch","Noah wanderer","farmhousegranola","Poundal","SmilingSilly","Markematu","Absolute","Zamageni",
+    "Greenda","twinkle charmer","Adeliza","Gigglebox","Scansorial","Hoary","Cathedralwa","Outstanding","Wardmote","Michinke","Titrimetry",
+    "Strike","Flash","Embryoniform","KamueSavor","retro emperor","Sonic","SylvanGirl","Noodle","LaughterLife","Coniaker","Amuse",
+    "Halottux","Smarten","junemoment","Public butter","BobbylentPardie","Chuckler","Winsome","Tosidium","Epenthesis","Junglizotnt"]
     @enum SpaceObjectClass begin
         planet = 1
         satellite = 2
@@ -30,6 +36,28 @@ module SpaceObjects
         temperature::Float32
         class::SpaceObjectClass 
     end
+    function generateRandomSpaceName()
 
+    end
+    function generateRandomSpaceObject()
+        name = ""
+        if rand() > 0.7
+            @label mark
+            name = greekNames[rand(1:end)] 
+            name += (rand() * 50000) |> round |> Int |> string
+            if name |> objectNameExists
+                @goto mark
+            end
+        else
+        
+        end
+        return SpaceObject(
+            nothing,
+
+        )
+    end
     
+    function objectNameExists(name::String)::Bool
+        return DB.executeQuery("SELECT * FROM SpaceObjects WHERE name = $(name)") |> length > 0 
+    end
 end
