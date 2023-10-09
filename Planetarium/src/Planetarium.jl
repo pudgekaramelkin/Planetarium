@@ -1,9 +1,11 @@
 module Planetarium
 
 using Genie
+include("Db.jl")
 include("Users.jl")
 include("Encryption.jl")
-include("Db.jl")
+include("SpaceObjects.jl")
+include("PlanetarySystem.jl")
 
 const up = Genie.up
 export up

@@ -2,7 +2,7 @@ module Users
     using Planetarium
     using Planetarium.DB
     struct User
-        id::Integer = -1
+        id::Integer
         name::String
         email::String
         balance::Float64
@@ -22,6 +22,12 @@ module Users
     
     function createUser(user::User)
         DB.executeQuery("INSERT INTO Users VALUES(NULL,'$(user.name)','$(user.email)',0,'$(user.password)')")
+    end
+    function deleteUser(id::Integer)::nothing
+        DB.executeQuery("DELETE FROM Users WHERE id = $(id)")
+    end
+    function deleteUser(user::User)::nothing
+        DB.executeQuery("DELETE FROM Users WHERE id = $(user.id)")
     end
 
     
