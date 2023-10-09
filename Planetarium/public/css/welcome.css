@@ -80,6 +80,10 @@
   outline: 0.5rex solid #fff;
 }
 
+.registerbtn:active {
+  transform: scale(0.93);
+}
+
 
 /* .login-form {
   height: 100vh;
