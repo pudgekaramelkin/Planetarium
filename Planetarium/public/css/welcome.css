@@ -3,13 +3,17 @@
   flex-direction: column;
   position: relative;
   z-index: 0;
-  min-height: 100vh;
-  min-width: 100vw;
+  min-height: 100svh;
+  min-width: 100%;
   font-family: 'Pixelify Sans', sans-serif;
   font-weight: 400;
-  font-size: 20px;
+  font-size: clamp(15px, calc(max(100vw, 100vh) / 96), 120px);
   color: #fff;
-  background-image: url(../img/a0aa8454a090e487bc2a1a0977fb4835.jpg);
+  background-color: #000; /*for users with slow internet*/
+  background-image: url(../img/backgrounds/welcome-page-background.jpg);
+  background-image: image-set(
+    url("../img/backgrounds/welcome-page-background.avif") type("image/avif"),
+    url("../img/backgrounds/welcome-page-background.webp") type("image/webp"));
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
@@ -34,16 +38,14 @@
 }
 
 .link {
-  color:white;
+  color:#fff;
   text-decoration: none;
   text-transform: uppercase;
 }
 
-
 .welcome-page__main {
   align-self: center;
   justify-self: center;
-  max-width: inherit;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,32 +54,32 @@
 
 .welcome-page__main-title-descrioption {
   text-align: center;
-  font-size: 30px;
+  font-size: 1.5em;
 }
 
 .welcome-page__main-title {
-  font-size: 100px;
+  font-size: 5em;
   font-weight: 600;
 }
 
 .registerbtn {
   background: radial-gradient(circle, rgba(41,236,255,1) 6%, rgba(34,0,250,1) 47%, rgba(209,105,194,1) 100%); 
   background-size: 400% 400%;
-  animation: gradient-animation 3s  infinite alternate linear;
+  animation: gradient-animation 3s infinite alternate linear;
   text-align: center;
-  width: 280px;
-  height: 60px;
+  width: clamp(250px, 70vw, 370px);
+  height: clamp(50px, 6vh, 100px);
   transition: 50ms;
 }
 
 .button-link {
   font-weight: 600;
-  color: black;
+  color: #000;
 }
 
 
 .registerbtn:hover {
-  outline: 0.5rex solid #fff;
+  outline: 0.2em solid #fff;
 }
 
 .registerbtn:active {
