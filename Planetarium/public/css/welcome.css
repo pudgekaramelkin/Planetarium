@@ -55,7 +55,7 @@
 .welcome-page__main-title-descrioption {
   padding: 0 7vi;
   text-align: center;
-  font-size: 1.9em;
+  font-size: 1.75em;
 }
 
 .welcome-page__main-title {
@@ -68,14 +68,14 @@
   background-size: 400% 400%;
   animation: gradient-animation 3s infinite alternate linear;
   text-align: center;
-  inline-size: clamp(250px, 70vw, 370px);
-  block-size: clamp(50px, 6vh, 100px);
+  inline-size: clamp(15.625rem, 9.615vw + 13.942rem, 37.5rem);
+  block-size: clamp(3.125rem, 2.747vw + 2.644rem, 9.375rem);
   transition: 50ms;
 }
 
 .button-link {
   font-weight: 600;
-  font-size: 1.2em;
+  font-size: 1.7em;
   color: #000;
 }
 
