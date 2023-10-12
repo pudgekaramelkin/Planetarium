@@ -4,11 +4,11 @@
   grid-template-rows: repeat(3, 1fr);
   position: relative;
   z-index: 0;
-  height: 100svh;
-  min-width: 100%;
+  min-inline-size: 100%;
+  block-size: 100svh;
   font-family: 'Pixelify Sans', sans-serif;
   font-weight: 400;
-  font-size: clamp(0.9375rem, 0.8193rem + 0.5731vw, 2.1875rem);
+  font-size: clamp(0.625rem, 0.452rem + 0.9887vw, 2.8125rem);
   color: #fff;
   background-color: #000; /*for users with slow internet*/
   background-image: url(../img/backgrounds/welcome-page-background.jpg);
@@ -27,8 +27,8 @@
   top: 0;
   right: 0;
   z-index: -1;
-  width: 100%;
-  height: 100%;
+  inline-size: 100%;
+  block-size: 100%;
   background-color: rgba(0, 0, 0, .5);
 }
 
@@ -53,12 +53,13 @@
 }
 
 .welcome-page__main-title-descrioption {
+  padding: 0 7vi;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.9em;
 }
 
 .welcome-page__main-title {
-  font-size: 5em;
+  font-size: 4em;
   font-weight: 600;
 }
 
@@ -67,16 +68,16 @@
   background-size: 400% 400%;
   animation: gradient-animation 3s infinite alternate linear;
   text-align: center;
-  width: clamp(250px, 70vw, 370px);
-  height: clamp(50px, 6vh, 100px);
+  inline-size: clamp(250px, 70vw, 370px);
+  block-size: clamp(50px, 6vh, 100px);
   transition: 50ms;
 }
 
 .button-link {
   font-weight: 600;
+  font-size: 1.2em;
   color: #000;
 }
-
 
 .registerbtn:hover {
   outline: 0.2em solid #fff;
@@ -85,7 +86,6 @@
 .registerbtn:active {
   transform: scale(0.93);
 }
-
 
 /* .login-form {
   height: 100vh;
