@@ -25,8 +25,8 @@ module SpaceObjects
         hypergiant_star = 15
         wolf_rayet_star = 16
     end
-    struct SpaceObject
-        id::Integer
+    Base.@kwdef mutable struct User
+        id::Union{Integer,String} == "NULL"
         name::String
         ownerId::Integer
         distance_from_owner::Float64
@@ -34,28 +34,28 @@ module SpaceObjects
         orbit_coordinates::Vector{Float32}
         composition::Vector{Pair}
         temperature::Float32
-        class::SpaceObjectClass 
+        class::Int
     end
     function generateRandomSpaceName()
 
     end
-    function generateRandomSpaceObject()
-        name = ""
-        if rand() > 0.7
-            @label mark
-            name = greekNames[rand(1:end)] 
-            name += (rand() * 50000) |> round |> Int |> string
-            if name |> objectNameExists
-                @goto mark
-            end
-        else
+    # function generateRandomSpaceObject()
+    #     name = ""
+    #     if rand() > 0.7
+    #         @label mark
+    #         name = greekNames[rand(1:end)] 
+    #         name += (rand() * 50000) |> round |> Int |> string
+    #         if name |> objectNameExists
+    #             @goto mark
+    #         end
+    #     else
         
-        end
-        return SpaceObject(
-            nothing,
+    #     end
+    #     return SpaceObject(
+    #         nothing,
 
-        )
-    end
+    #     )
+    # end
     
     function objectNameExists(name::String)::Bool
         return DB.executeQuery("SELECT * FROM SpaceObjects WHERE name = $(name)") |> length > 0 

@@ -1,15 +1,18 @@
 module Users
     using Planetarium
     using Planetarium.DB
-    struct User
-        id::Integer
+    #using Planetarium.
+    using SearchLight
+    using SearchLightMySQL
+    Base.@kwdef mutable struct User
+        id::Union{Integer,String} = "NULL"
         name::String
         email::String
-        balance::Float64
+        balance::Float64 = 0
         password::String
     end
-    
-    function getUser(id::Integer)
+
+    function getUser(id::Integer)::User
         userInfo = DB.executeQuery("SELECT * FROM Users WHERE id = $id")
         return User(
             userInfo[1,"id"],
@@ -20,7 +23,7 @@ module Users
         )
     end
     
-    function createUser(user::User)
+    function createUser(user::User)::nothing
         DB.executeQuery("INSERT INTO Users VALUES(NULL,'$(user.name)','$(user.email)',0,'$(user.password)')")
     end
     function deleteUser(id::Integer)::nothing
