@@ -1,1 +1,1 @@
-"julia" -t auto --color=yes --depwarn=no --project=@. -q -i -- "%~dp0..\bootstrap.jl" -s=true %*
+"julia" -t auto -p auto --color=yes --depwarn=no --project=@. -q -i -- "%~dp0..\bootstrap.jl" -s=true %*
